@@ -5,7 +5,7 @@
 This plugin bundles:
 
 - **MCP server config** — connects to the hosted UseAgents registry at `https://mcp.useagents.site/mcp`
-- **Agent Skill** — teaches agents the search → context → docs → implement workflow
+- **Agent Skill** — teaches agents the search → context → docs → implement → test workflow
 
 Compatible with Cursor and other [Agent Plugins 1.0.0](https://agent-plugins.org/specification) clients.
 
@@ -14,7 +14,7 @@ Compatible with Cursor and other [Agent Plugins 1.0.0](https://agent-plugins.org
 | Component | Purpose |
 | --------- | ------- |
 | [`plugin.json`](./plugin.json) | Plugin manifest (name, version, metadata) |
-| [`mcp.json`](./mcp.json) | Remote MCP server (`search_tools`, `get_tool_context`, `search_docs`) |
+| [`mcp.json`](./mcp.json) | Remote MCP server (`search_tools`, `get_tool_context`, `search_docs`, `test_tool`) |
 | [`skills/useagents/`](./skills/useagents/) | Discovery skill with MCP, CLI, and API references |
 
 ## Workflow
@@ -26,6 +26,7 @@ When an agent needs a developer tool:
 3. **Fetch context** — Load install/bootstrap guidance for the chosen slug
 4. **Search docs** — Ask deeper how-to questions against the tool's official documentation
 5. **Implement** — Write code from context and docs; never invent package names when context is missing
+6. **Test** — Optionally smoke-test the snippet in a UseAgents sandbox (`test_tool`); it does not run on the user's machine
 
 ## Install
 
@@ -51,6 +52,7 @@ Clone or copy this directory into your client's plugin path. The client discover
 | `search_tools` | Natural-language registry search |
 | `get_tool_context` | Install and usage context for a slug |
 | `search_docs` | Search a tool's official docs with a question |
+| `test_tool` | Smoke-test a snippet in a UseAgents sandbox |
 
 Docs: https://docs.useagents.site/mcp/tools-reference/introduction
 
