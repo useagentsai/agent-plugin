@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "useagents",
-  "version": "1.0.0",
-  "description": "Discover developer tools via the UseAgents registry — search, fetch context, and search official docs.",
+  "version": "1.1.0",
+  "description": "Discover developer tools via the UseAgents registry — search, fetch context, search official docs, and smoke-test snippets in a sandbox.",
   "author": {
     "name": "UseAgents",
     "url": "https://useagents.site"
@@ -16,6 +16,7 @@
     "tools",
     "registry",
     "agent-skills",
-    "developer-tools"
+    "developer-tools",
+    "sandbox"
   ]
 }
